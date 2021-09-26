@@ -33,9 +33,6 @@ sum_watched_hours <- function(conn, group_id, time_unit = c("year", "month")){
   require(stringr)
   require(dplyr)
   
-  # # Db Connection
-  # conn <- dbConnect(drv = SQLite(), dbname = "assessment_data.sqlite3")
-  
   # Prepare SQL Variable
   group_id_sql <- toString(sprintf("'%s'", group_id))
 
