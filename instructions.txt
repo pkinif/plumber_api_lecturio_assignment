@@ -1,0 +1,17 @@
+Instructions
+
+Data to be used for the project are in the SQLite DB. Data provide information on how much (watched_seconds) users watched different lectures (=short videos) as well as which group a user belongs to.
+
+Task: Write an API endpoint that returns the sum of watched hours per group and per year or per month. 
+We want to choose which groups should be included, by handing over group_ids as query parameter (default = all groups included).
+We also want to choose whether returning the sum per year or per month.
+If a group did not watch anything during a year/month, value should be 0.
+
+The output should include the year and month (depending on the summarising unit), the group name(s) and the hours watched. It should be returned as a json.
+
+
+You are provided with an R project that makes use of renv for control of R version and packages.
+It should be set up automatically when you open the project for the first time, i.e. a library with the necessary packages will be created in the renv directory. 
+The R packages included should be sufficient for this assessment.
+The structure of the R project mimics our API project structure. You should add your code to the files APIs/api1/api1.R and APIs/api1/endpoint1.R accordingly, function definitions can go into the R directory (APIs/R). 
+The API should run locally in swagger by running the code in the main file (main.R). At the moment it should return "status code: 200" when successful, after you added your code it should return the results.
